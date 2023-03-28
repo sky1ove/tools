@@ -5,5 +5,4 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://sky1ove.github.io',
                 'git_url': 'https://github.com/sky1ove/tools',
                 'lib_path': 'tools'},
-  'syms': { 'tools.func': {'tools.func.myadd': ('func.html#myadd', 'tools/func.py')},
-            'tools.func2': {'tools.func2.myadd2': ('func2.html#myadd2', 'tools/func2.py')}}}
+  'syms': {'tools.func': {'tools.func.smi2mol': ('func.html#smi2mol', 'tools/func.py')}}}
