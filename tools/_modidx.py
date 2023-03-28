@@ -6,4 +6,6 @@ d = { 'settings': { 'branch': 'main',
                 'git_url': 'https://github.com/sky1ove/tools',
                 'lib_path': 'tools'},
   'syms': { 'tools.func': { 'tools.func.smi2morgan': ('func.html#smi2morgan', 'tools/func.py'),
-                            'tools.func.smi2prop': ('func.html#smi2prop', 'tools/func.py')}}}
+                            'tools.func.smi2prop': ('func.html#smi2prop', 'tools/func.py')},
+            'tools.plot': { 'tools.plot.get_pca': ('plot.html#get_pca', 'tools/plot.py'),
+                            'tools.plot.smi2morgan': ('plot.html#smi2morgan', 'tools/plot.py')}}}
