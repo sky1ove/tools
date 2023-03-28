@@ -3,6 +3,18 @@
 # %% auto 0
 __all__ = ['smi2mol']
 
+# %% ../nbs/00_func.ipynb 3
+import seaborn as sns
+import numpy as np
+from rdkit import Chem
+from rdkit.Chem import AllChem
+from rdkit.ML.Descriptors import MoleculeDescriptors
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+import pandas as pd
+from rdkit.Chem import Draw
+from rdkit.Chem import Descriptors
+
 # %% ../nbs/00_func.ipynb 4
 def smi2mol(smi):
     return Chem.MolFromSmiles(smi)
