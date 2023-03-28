@@ -4,5 +4,8 @@
 __all__ = ['myadd2']
 
 # %% ../nbs/01_func2.ipynb 4
+from .func import *
+
+# %% ../nbs/01_func2.ipynb 5
 def myadd2(a,b):
     return myadd(a,b)

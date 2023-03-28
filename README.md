@@ -17,7 +17,7 @@ pip install tools
 Fill me in please! Don’t forget code examples:
 
 ``` python
-1+1
+myadd(1,2)
 ```
 
     2
