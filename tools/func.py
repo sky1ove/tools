@@ -14,12 +14,14 @@ from rdkit.ML.Descriptors import MoleculeDescriptors
 import pandas as pd
 from rdkit.Chem import Draw
 from rdkit.Chem import Descriptors
+from sklearn.preprocessing import StandardScaler
 
 # %% ../nbs/00_func.ipynb 4
 def smi2prop(df, # df needs to have SMILES an ID columns
              smi_colname = "SMILES",
              id_colname = "ID",
              remove_duplicate=True,
+             std = False
             ):
     
     mols = [Chem.MolFromSmiles(smi) for smi in df[smi_colname]]
@@ -31,9 +33,13 @@ def smi2prop(df, # df needs to have SMILES an ID columns
         compound = compound.loc[~compound.duplicated()] # remove duplicates
         compound = compound.loc[compound.std(axis=1) != 0] # remove features that are equal for all compounds
     compound = compound.T.reset_index()
+    if std:
+        scaler = StandardScaler()
+        transformed = scaler.fit_transform(compound.iloc[:,1:])
+        compound.iloc[:,1:] = transformed
     return compound
 
-# %% ../nbs/00_func.ipynb 8
+# %% ../nbs/00_func.ipynb 9
 def smi2morgan(df,
                smi_colname = "SMILES",
                id_colname = "ID"

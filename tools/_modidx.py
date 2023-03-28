@@ -7,5 +7,6 @@ d = { 'settings': { 'branch': 'main',
                 'lib_path': 'tools'},
   'syms': { 'tools.func': { 'tools.func.smi2morgan': ('func.html#smi2morgan', 'tools/func.py'),
                             'tools.func.smi2prop': ('func.html#smi2prop', 'tools/func.py')},
-            'tools.plot': { 'tools.plot.get_pca': ('plot.html#get_pca', 'tools/plot.py'),
-                            'tools.plot.smi2morgan': ('plot.html#smi2morgan', 'tools/plot.py')}}}
+            'tools.plot': { 'tools.plot.direct_pca_plot': ('plot.html#direct_pca_plot', 'tools/plot.py'),
+                            'tools.plot.get_pca': ('plot.html#get_pca', 'tools/plot.py'),
+                            'tools.plot.plot_2d': ('plot.html#plot_2d', 'tools/plot.py')}}}
