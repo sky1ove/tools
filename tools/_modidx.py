@@ -7,5 +7,4 @@ d = { 'settings': { 'branch': 'main',
                 'lib_path': 'tools'},
   'syms': { 'tools.func': { 'tools.func.smi2morgan': ('func.html#smi2morgan', 'tools/func.py'),
                             'tools.func.smi2prop': ('func.html#smi2prop', 'tools/func.py')},
-            'tools.plot': { 'tools.plot.get_embedding': ('plot.html#get_embedding', 'tools/plot.py'),
-                            'tools.plot.plot_embedding': ('plot.html#plot_embedding', 'tools/plot.py')}}}
+            'tools.plot': {'tools.plot.esm_embeddings': ('esm.html#esm_embeddings', 'tools/plot.py')}}}
