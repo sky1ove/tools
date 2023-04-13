@@ -5,6 +5,8 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://sky1ove.github.io',
                 'git_url': 'https://github.com/sky1ove/tools',
                 'lib_path': 'tools'},
-  'syms': { 'tools.func': { 'tools.func.smi2morgan': ('func.html#smi2morgan', 'tools/func.py'),
-                            'tools.func.smi2prop': ('func.html#smi2prop', 'tools/func.py')},
-            'tools.plot': {'tools.plot.esm_embeddings': ('esm.html#esm_embeddings', 'tools/plot.py')}}}
+  'syms': { 'tools.esm': {'tools.esm.esm_embeddings': ('esm.html#esm_embeddings', 'tools/esm.py')},
+            'tools.feature': { 'tools.feature.smi2morgan': ('feature.html#smi2morgan', 'tools/feature.py'),
+                               'tools.feature.smi2prop': ('feature.html#smi2prop', 'tools/feature.py')},
+            'tools.plot': { 'tools.plot.get_embedding': ('plot.html#get_embedding', 'tools/plot.py'),
+                            'tools.plot.plot_embedding': ('plot.html#plot_embedding', 'tools/plot.py')}}}
