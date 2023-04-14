@@ -3,7 +3,7 @@
 # %% auto 0
 __all__ = ['smi2prop', 'smi2morgan']
 
-# %% ../nbs/00_feature.ipynb 3
+# %% ../nbs/00_feature.ipynb 4
 import seaborn as sns
 import numpy as np
 from rdkit import Chem
@@ -14,7 +14,15 @@ from rdkit.Chem import Draw
 from rdkit.Chem import Descriptors
 from sklearn.preprocessing import StandardScaler
 
-# %% ../nbs/00_feature.ipynb 4
+# %% ../nbs/00_feature.ipynb 5
+from fastbook import *
+from fairscale.nn.data_parallel import FullyShardedDataParallel as FSDP
+from fairscale.nn.wrap import enable_wrap, wrap
+import esm
+from tqdm.notebook import tqdm; tqdm.pandas()
+import gc
+
+# %% ../nbs/00_feature.ipynb 6
 def smi2prop(df, # df needs to have SMILES an ID columns
              smi_colname = "SMILES", # column name of smiles
              id_colname = "ID", # column name of ID
@@ -38,7 +46,7 @@ def smi2prop(df, # df needs to have SMILES an ID columns
         compound.iloc[:,1:] = transformed
     return compound
 
-# %% ../nbs/00_feature.ipynb 10
+# %% ../nbs/00_feature.ipynb 12
 def smi2morgan(df, # a dataframe contains ID and SMILES columns
                smi_colname = "SMILES", # set smiles columne name
                id_colname = "ID", # set ID column name
