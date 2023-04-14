@@ -18,10 +18,10 @@ from sklearn.preprocessing import StandardScaler
 def smi2prop(df, # df needs to have SMILES an ID columns
              smi_colname = "SMILES", # column name of smiles
              id_colname = "ID", # column name of ID
-             remove_duplicate=True, # remove compounds that have duplicated feature or same value across features (std=0)
+             remove_duplicate=True, # remove features that are same across compounds
              normalize = False, # normalize features using StandardScaler()
             ):
-    "Convert a dataframe that contains [ID & smiles] to [ID & 138 features from rdkit.Chem.Descriptors]"
+    "Extract 208 features from smiles via rdkit.Chem.Descriptors, and remove duplicate features"
     
     mols = [Chem.MolFromSmiles(smi) for smi in df[smi_colname]]
     desc_names = [desc_name[0] for desc_name in Descriptors.descList]
