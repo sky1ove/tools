@@ -14,4 +14,6 @@ d = { 'settings': { 'branch': 'main',
                                'tools.feature.smi2morgan': ('feature.html#smi2morgan', 'tools/feature.py'),
                                'tools.feature.smi2prop': ('feature.html#smi2prop', 'tools/feature.py')},
             'tools.plot': { 'tools.plot.get_embedding': ('plot.html#get_embedding', 'tools/plot.py'),
-                            'tools.plot.plot_embedding': ('plot.html#plot_embedding', 'tools/plot.py')}}}
+                            'tools.plot.plot_embedding': ('plot.html#plot_embedding', 'tools/plot.py')},
+            'tools.toolbox': {'tools.toolbox.calculate_similarity': ('toolbox.html#calculate_similarity', 'tools/toolbox.py')},
+            'tools.train': {'tools.train.xgb_trainer': ('train.html#xgb_trainer', 'tools/train.py')}}}
