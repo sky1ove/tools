@@ -4,6 +4,13 @@
 __all__ = ['xgb_trainer']
 
 # %% ../nbs/02_train.ipynb 4
+from fastbook import *
+import xgboost as xgb
+import matplotlib.pyplot as plt
+from scipy.stats import spearmanr
+from sklearn.model_selection import train_test_split
+
+# %% ../nbs/02_train.ipynb 5
 def xgb_trainer(df,
                 feature_col,
                 target_col,
@@ -73,3 +80,11 @@ def xgb_trainer(df,
     plt.close()
     
     return gain, weight
+
+# %% ../nbs/02_train.ipynb 24
+import pandas as pd
+import numpy as np
+import xgboost as xgb
+import matplotlib.pyplot as plt
+from scipy.stats import spearmanr
+from sklearn.model_selection import train_test_split

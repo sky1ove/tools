@@ -126,3 +126,7 @@ def esm_embeddings(df: pd.DataFrame,
         df_feature = pd.DataFrame(series.tolist())
 
         return df_feature
+
+# %% ../nbs/00_feature.ipynb 22
+#| export
+
