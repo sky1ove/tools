@@ -14,7 +14,7 @@ class Data:
 
     ANTIBIOTICS_URL = "https://github.com/sky1ove/tools/raw/main/dataset/antibiotics_2335.csv"
     G12D_URL = "https://github.com/sky1ove/tools/raw/main/dataset/KRASi_g12d.csv"
-    G12D_IC50_URL = "https://github.com/sky1ove/tools/raw/main/dataset/dedup_IC50.csv"
+    G12D_DEDUP_URL = "https://github.com/sky1ove/tools/raw/main/dataset/KRASi_g12d_dedup.csv.csv"
     KSEQ_URL = "https://github.com/sky1ove/tools/raw/main/dataset/kras_seq.csv"
 
     def __init__(self):
@@ -38,11 +38,11 @@ class Data:
         return df
     
     @staticmethod
-    def get_g12d_IC50():
+    def get_g12d_dedup():
         """
-        Fetches the deduplicated IC50 G12D dataset from the paper and patents.
+        Fetches the deduplicated G12D dataset from the paper and patents.
         """
-        df = pd.read_csv(Data.G12D_IC50_URL)
+        df = pd.read_csv(Data.G12D_DEDUP_URL)
         return df
     
     @staticmethod

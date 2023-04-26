@@ -21,7 +21,7 @@ def tanimoto(df, #pandas DataFrame with SMILES and ID columns.
     Calculates the Tanimoto similarity scores between all pairs of molecules in a pandas DataFrame.
     
     """
-
+    df = df.copy()
     # Convert SMILES to molecule objects
     df['Molecule'] = df[smiles_col].apply(lambda x: Chem.MolFromSmiles(x))
 
